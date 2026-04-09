@@ -1,5 +1,5 @@
 FROM amazon/aws-cli:latest
 
-RUN amazon-linux-extras install docker
+RUN dnf install -y docker && dnf clean all
 
 ENTRYPOINT [ "sh", "-c", "true" ]
